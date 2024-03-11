@@ -1,6 +1,6 @@
 package com.reademe.demo.entity.post;
 
-import com.reademe.demo.entity.user.User;
+import com.reademe.demo.entity.users.Users;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,5 +17,5 @@ public class PostLike {
     private Post post;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private User user;
+    private Users users;
 }

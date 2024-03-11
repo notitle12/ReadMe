@@ -1,6 +1,6 @@
 package com.reademe.demo.entity.comment;
 
-import com.reademe.demo.entity.user.User;
+import com.reademe.demo.entity.users.Users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +16,7 @@ public class CommentLike {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private User user;
+    private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Comment comment;

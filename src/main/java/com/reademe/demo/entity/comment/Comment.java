@@ -1,7 +1,7 @@
 package com.reademe.demo.entity.comment;
 
 import com.reademe.demo.entity.post.Post;
-import com.reademe.demo.entity.user.User;
+import com.reademe.demo.entity.users.Users;
 import com.reademe.demo.entity.util.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ public class Comment extends BaseEntity {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private User user;
+    private Users users;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Post post;
